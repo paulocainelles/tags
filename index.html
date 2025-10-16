@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Botões e Carrossel só com HTML e CSS</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+  <link rel="stylesheet" href="tag.css" />
+</head>
+<body>
+  <div class="container">
+
+<div class="profile-photo">
+  <img src="https://thumbs.dreamstime.com/b/ilustra%C3%A7%C3%A3o-plana-vetor-de-perfil-do-usu%C3%A1rio-imagem-da-silhueta-neutra-g%C3%AAnero-%C3%ADcone-pessoa-avatar-adequado-para-perfis-redes-304778094.jpg" alt="Foto de Perfil" />
+</div>
+    <!-- empresa -->
+<h2>Nome da empresa</h2>
+ <p>Somos especialistas na criação de tags personalizadas, desenvolvidas para atender às necessidades específicas do seu negócio. Com tecnologia avançada e materiais de alta qualidade, produzimos tags duráveis e elegantes para identificação, organização e promoção da sua marca. Seja para produtos, eventos ou uso corporativo, oferecemos soluções práticas, rápidas e com design exclusivo, garantindo funcionalidade e estilo em cada detalhe.</p>
+    
+    <!-- localização -->
+     <h2>Endereço</h2>
+     <p>Av. das Flores, 1234, Bairro Jardim, São Paulo, SP, Brasil.</p>
+    
+     <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botões de Ação</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="botao-container">
+  <button class="btn whatsapp" onclick="salvarContato()">Salvar Contato</button>
+    <button class="btn whatsapp" onclick="ligar()">Ligar</button>
+</div>
+
+<script>
+    function salvarContato() {
+        alert("Contato salvo!");
+    }
+
+    function ligar() {
+        alert("Ligando...");
+    }
+</script>
+ 
+    <!-- Botões -->
+    <button class="btn whatsapp">
+      <i class="fab fa-whatsapp"></i> WhatsApp
+    </button>
+    <button class="btn instagram">
+      <i class="fab fa-instagram"></i> Instagram
+    </button>
+    <button class="btn google">
+      <i class="fas fa-star"></i> Agendamento
+    </button>
+    <button class="btn pix">
+      <i class="fas fa-key"></i> Chave PIX
+    </button>
+
+    <!-- Inputs para controle do carrossel -->
+    <input type="radio" name="carousel" id="slide1" checked />
+    <input type="radio" name="carousel" id="slide2" />
+    <input type="radio" name="carousel" id="slide3" />
+
+    <!-- Caixa fixa para título e frase -->
+<div class="slide-info">
+  <h2>Soluções Inteligentes para Aproximação e Conexão</h2>
+  <p>Focados em trazer para você o seu cartão de visita online.</p>
+</div>
+
+    <!-- Carrossel -->
+<div class="slides">
+  <div class="slide" id="s1">
+    <img src="https://tse2.mm.bing.net/th/id/OIP.J4NTkrUB6cWvOHK1ZP1xlQAAAA?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Paisagem Montanhosa" />
+  </div>
+  <div class="slide" id="s2">
+    <img src="https://tse2.mm.bing.net/th/id/OIP.J4NTkrUB6cWvOHK1ZP1xlQAAAA?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Mar ao Entardecer" />
+  </div>
+  <div class="slide" id="s3">
+    <img src="https://tse2.mm.bing.net/th/id/OIP.J4NTkrUB6cWvOHK1ZP1xlQAAAA?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3" alt="Floresta Verdejante" />
+  </div>
+</div>
+
+
+  
+
+    <!-- Navegação -->
+    <div class="navigation">
+      <label for="slide1" class="nav-btn"></label>
+      <label for="slide2" class="nav-btn"></label>
+      <label for="slide3" class="nav-btn"></label>
+    </div>
+  </div>
+</body>
+</html>
