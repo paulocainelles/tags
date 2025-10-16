@@ -1,0 +1,221 @@
+/* Reset e básicos */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f2f2;
+  padding: 30px 15px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.container {
+  max-width: 640px;
+  background: white;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Botões um abaixo do outro */
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: white;
+  width: 100%;
+}
+
+.btn i {
+  font-size: 1.3rem;
+}
+
+.whatsapp {
+  background-color: #25d366;
+}
+
+.whatsapp:hover {
+  background-color: #1ebe57;
+}
+
+.instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.instagram:hover {
+  filter: brightness(0.9);
+}
+
+.google {
+  background-color: #4285f4;
+}
+
+.google:hover {
+  background-color: #357ae8;
+}
+
+.pix {
+  background-color: #00a859;
+}
+
+.pix:hover {
+  background-color: #007b43;
+}
+
+/* Esconde os inputs radio */
+input[type="radio"] {
+  display: none;
+}
+
+/* Carrossel */
+.slides {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.slide {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 300px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Texto sobre a imagem */
+.slide-text {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.6);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  max-width: 90%;
+  text-align: center;
+}
+
+/* Mostra o slide ativo */
+#slide1:checked ~ .slides #s1,
+#slide2:checked ~ .slides #s2,
+#slide3:checked ~ .slides #s3 {
+  opacity: 1;
+  position: relative;
+  z-index: 1;
+}
+
+/* Navegação */
+.navigation {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.nav-btn {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin: 0 7px;
+  border-radius: 50%;
+  background: #bbb;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+/* Botão ativo */
+#slide1:checked ~ .navigation label[for="slide1"],
+#slide2:checked ~ .navigation label[for="slide2"],
+#slide3:checked ~ .navigation label[for="slide3"] {
+  background: #333;
+}
+
+.profile-photo {
+  display: flex;
+  justify-content: center; /* centraliza horizontalmente */
+  margin-bottom: 20px;
+}
+
+.profile-photo img {
+  width: 120px;     /* tamanho do círculo */
+  height: 120px;    /* tamanho do círculo */
+  border-radius: 50%;
+  object-fit: cover; /* para a imagem preencher o círculo sem distorcer */
+  border: 3px solid #25d366; /* borda verde, por exemplo */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* sombra leve opcional */
+}
+.map-box {
+  width: 300px;           /* largura fixa */
+  height: 200px;          /* altura fixa */
+  border: 1px solid #ccc; /* borda */
+  margin: 0 auto;         /* centraliza horizontalmente */
+}
+.botao-container {
+    display: flex;
+    gap: 20px;
+}
+
+.botao {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.salvar {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.ligar {
+    background-color: #007BFF;
+    color: white;
+}
+
+.botao:hover {
+    opacity: 0.8;
+}
+
+/* Responsividade */
+@media (max-width: 700px) {
+  .container {
+    max-width: 90vw;
+  }
+  .slide-text {
+    font-size: 1.1rem;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .btn {
+    font-size: 1rem;
+  }
+}
